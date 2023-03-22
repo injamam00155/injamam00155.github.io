@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+    <title>Inja Personal Portfolio</title>
+</head>
+<body>
+    <!-- HEADER -->
+    <div id="header">
+        <div class ="container">
+            <nav>
+                <img src="images\inja_logo.png" class="logo">
+                <ul id='sidemenu'>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Hobbies</a></li>
+                    <li><a href="#">Awards</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+        </div>
+            <div class="header-text">
+                <h1>
+                    STUDENT
+                </h1>
+                <h2>
+                    Hola, I'm <span>Injamam</span> <br> from Bangladesh
+                </h2>
+            </div>
+        </div>
+    </div>
+    <!-- About -->
+    <div id="about">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="subtitle">About Me</h1>
+                <div class="about-tabs">
+                    <p class="about-links active-links" onclick="opentab('skills')">
+                        Skills
+                    </p>
+                    <p class="about-links" onclick="opentab('education')">
+                        Education
+                    </p>
+                    <p class="about-links" onclick="opentab('experience')">
+                        Experience
+                    </p>
+                </div>
+                <div class="about-contents active-contents" id="skills">
+                    <ul>
+                        <li>
+                            <span>Spreadsheet</span><br>
+                            Expertise in Google sheets and MS Excel.
+                        </li>
+                        <li>
+                            <span>Database</span><br>
+                            Experience in MySQL and MongoDB.
+                        </li>
+                        <li>
+                            <span>Web Development</span><br>
+                            Expertise in HTML, CSS, Bootstrap. Also experienced in frameworks like NodeJS and Django. 
+                        </li>
+                        <li>
+                            <span>Coding and Debugging</span><br>
+                            Code and Debug in C, C++, Python and Java.
+                        </li>
+                        <li>
+                            <span>Visuals</span><br>
+                            Equip knowledge about Adobe Illustrator and Adobe Photoshop.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="about-contents"  id="education">
+                    <ul>
+                        <li>
+                            <span>BSc. in Computer Science at IUB.</span><br>
+                            Current <br>
+                            CGPA: 3.92
+                        </li>
+                        <li>
+                            <span>A levels - Manarat Dhaka International College.</span><br>
+                            Year: 2019 <br>
+                            Grade: 2A*, 2A
+                        </li>
+                        <li>
+                            <span>O levels - Manarat Dhaka International College.</span><br>
+                            Year: 2017 <br>
+                            Grade: 6A*, 3A
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="about-contents"  id="experience">
+                    <ul>
+                        <li>
+                            <span>2016 - 2019</span><br>
+                            Freelancer at Fiverr and Freelancer.com .
+                        </li>
+                        <li>
+                            <span>2017 - Current</span><br>
+                            Home tutoring students and being Teaching and Lab Assistant to Professors.
+                        </li>
+                        <li>
+                            <span>2022 - Current</span><br>
+                            PR Sub Executive at JUKTI 
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Services -->
+    <div id="services">
+        <div class="container">
+            <h1 class="subtitle">Services I provide</h1>
+            <div class="services-list">
+                <div>
+                    <h1>📚🎓👩‍🏫</h1>
+                    <h2>Home Tutoring </h2>
+                    <p>
+                        I provide tutions to CAIE O level and A level students. 
+                    </p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <h1>📊📈🔍</h1>
+                    <h2>Data Entry </h2>
+                    <p>
+                        I provide tutions to CAIE O level and A level students. 
+                    </p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <h1>🌐💻🔧</h1>
+                    <h2>Building Websites </h2>
+                    <p>
+                        I provide tutions to CAIE O level and A level students. 
+                    </p>
+                    <a href="#">Learn More</a>
+                </div>
+        </div>
+    </div>
+    <!-- Portfolio -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="subtitle">  Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work1.jpg">
+                    <div class="layer">
+                        <h3>Spreadsheet</h3>
+                        <p>Spreadsheet work to manage Sales</p>
+                        <a href="#">🔗</a>
+                    </div>
+                </div>
+                <div  class="work">
+                    <img src="images/work2.png">
+                    <div class="layer">
+                        <h3>SPMS</h3>
+                        <p>Student Performance Management System</p>
+                        <a href="#">🔗</a>
+                    </div>
+                </div>
+                <div  class="work">
+                    <img src="images/work3.png">
+                    <div class="layer">
+                        <h3>Khaddo Bangla</h3>
+                        <p>A website to find ingredients and recipes of something we are willing to find</p>
+                        <a href="#">🔗</a>
+                    </div>
+                </div>
+                <div  class="work">
+                    <img src="images/work4.png">
+                    <div class="layer">
+                        <h3>E-School</h3>
+                        <p>Online Learning Platform</p>
+                        <a href="#">🔗</a>
+                    </div>
+                </div>
+                <div  class="work">
+                    <img src="images/work5.png">
+                    <div class="layer">
+                        <h3>Chef's Table</h3>
+                        <p>Simulation of Chef's table food court online site</p>
+                        <a href="#">🔗</a>
+                    </div>
+                </div>
+                <div  class="work">
+                    <img src="images/work6.png">
+                    <div class="layer">
+                        <h3>Spreadsheet</h3>
+                        <p>Spreadsheet to manage tournament Fixture</p>
+                        <a href="#">🔗</a>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+    <!-- Contact -->
+
+    <div id="contact">
+        <div class="container">
+            <h1 class="subtitle">Contact Me</h1><br>
+            <div class="row">
+                <div class="contact-left">
+                    <p>📧 injamam00155@gmail.com</p>
+                    <p>📱 01689073801</p><br>
+                    <div class="social-icons">
+                        
+                        <a href="https://www.facebook.com/injamam00155/"> <img src="images/fb.png"></a>
+                        <a href="https://github.com/injamam00155"><img src="images/github.png"></a>
+                        <a href="https://www.linkedin.com/in/injamam00155/"><img src="images/linkedin.png"></a>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Name" required>
+                        <input type="email" name="Email" placeholder="Email" required>
+                        <input name="message" name="message" placeholder="Your Message">
+                        <button type="Submit" class="btn btn2" >SUBMIT</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+</div>
+    <div class="footer">
+            Copyright @ injamam00155
+    </div>
+
+    <script>
+        var aboutlinks = document.getElementsByClassName('about-links');
+        var aboutcontents = document.getElementsByClassName('about-contents');
+
+        function opentab(tabname)
+        {
+            for(aboutlink of aboutlinks)
+            {
+                aboutlink.classList.remove('active-links');
+            }
+            for(aboutcontent of aboutcontents)
+            {
+                aboutcontent.classList.remove('active-contents');
+            }
+            event.currentTarget.classList.add("active-links");
+            document.getElementById(tabname).classList.add("active-contents");
+        }
+    </script>
+    <script>
+        var sidemenu = document.getElementById('sidemenu');
+
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
+
+        function closemenu() {
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+
+</body>
+</html>

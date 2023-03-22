@@ -386,6 +386,14 @@ form input
     margin-top:  20px;
 }
 
+.social-icons a
+{
+    border: #FFFFFF;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    line-height: 50%;
+}
+
 /* ----------Making Responsive for small screens--------------------- */
 
 nav .fas

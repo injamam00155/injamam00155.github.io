@@ -23,6 +23,7 @@ body{
 }
 .header-text
 {
+    margin-left: 30px;
     margin-top: 300px;
     font-size: 16px;
 }

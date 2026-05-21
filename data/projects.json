@@ -1,50 +1,82 @@
 [
   {
     "id": 1,
-    "title": "School Routine Planner & Substitution Engine",
-    "category": "Development & Education",
-    "techStack": ["Python", "Automation"],
-    "description": "Automated scheduling logic and teacher leave data management system.",
-    "githubUrl": "#"
+    "title": "Potato Plant Disease Detection",
+    "category": "AI & Research",
+    "techStack": ["Python", "TensorFlow", "Deep Learning", "Computer Vision"],
+    "description": "AI-based system using deep learning and image analysis to detect diseases in potato plants early through leaf images. Helps farmers monitor crops, identify diseases sooner, and manage them more effectively.",
+    "githubUrl": "https://github.com/injamam00155"
   },
   {
     "id": 2,
-    "title": "Automated Lead Generation Pipeline",
-    "category": "AI/MLOps & Business",
-    "techStack": ["n8n", "MLOps", "AI Agents"],
-    "description": "End-to-end automated workflows for lead tracking and conversion for consultancy operations.",
-    "githubUrl": "#"
+    "title": "EduBot — University AI Chatbot",
+    "category": "AI & Research",
+    "techStack": ["Python", "NLP", "AI", "Jupyter Notebook"],
+    "description": "Personalized AI chatbot that receives text messages about the University and responds accordingly. Demonstrates retrieval-based AI for institutional knowledge systems.",
+    "githubUrl": "https://github.com/injamam00155"
   },
   {
     "id": 3,
-    "title": "Student Performance Management System",
-    "category": "Development & Education",
-    "techStack": ["Python", "Django", "MySQL"],
-    "description": "Web-based platform for tracking, analyzing, and visualizing student academic performance data.",
-    "githubUrl": "#"
+    "title": "Student Performance Monitoring System",
+    "category": "Web Dev & Education",
+    "techStack": ["Django", "MySQL", "HTML", "CSS", "JavaScript"],
+    "description": "Full-stack web system to assess and track student performance, designed for students, faculty, and administrators with role-based dashboards.",
+    "githubUrl": "https://github.com/injamam00155/CSE303-sec-04-Group-03"
   },
   {
     "id": 4,
-    "title": "E-School Learning Platform",
-    "category": "Development & Education",
-    "techStack": ["NodeJS", "MongoDB", "HTML/CSS"],
-    "description": "Full-stack e-learning platform with course management, student progress tracking, and interactive content delivery.",
-    "githubUrl": "#"
+    "title": "IUB Alumni Bridge",
+    "category": "Web Dev & Education",
+    "techStack": ["Laravel", "MySQL", "Bootstrap", "JavaScript"],
+    "description": "Networking platform connecting IUB current students with alumni for mentorship, career guidance, and professional opportunities.",
+    "githubUrl": "https://github.com/injamam00155/IUB_Alumni_Bridge"
   },
   {
     "id": 5,
-    "title": "Khaddo Bangla — Recipe Finder",
-    "category": "Development",
-    "techStack": ["Python", "API Integration"],
-    "description": "Ingredient-based Bangladeshi recipe search and discovery app with nutritional information.",
-    "githubUrl": "#"
+    "title": "Air Quality Index Monitor",
+    "category": "Web Dev & Education",
+    "techStack": ["Django", "MySQL", "HTML", "CSS", "JavaScript"],
+    "description": "Web system for monitoring and visualizing pollution levels and air quality data across geographic areas with real-time data visualizations.",
+    "githubUrl": "https://github.com/injamam00155/CSE303-sec-03-Group-03"
   },
   {
     "id": 6,
-    "title": "Sales Management Spreadsheet System",
-    "category": "Data & Business",
-    "techStack": ["Google Sheets", "Excel", "Automation"],
-    "description": "Advanced spreadsheet system with automated formulas, dashboards, and sales analytics for small businesses.",
-    "githubUrl": "#"
+    "title": "Product Recommendation System",
+    "category": "AI & Research",
+    "techStack": ["Python", "Scikit-Learn", "Pandas", "Jupyter Notebook"],
+    "description": "Collaborative and content-based filtering recommendation engine that suggests products based on personal choices and aggregated user ratings.",
+    "githubUrl": "https://github.com/injamam00155"
+  },
+  {
+    "id": 7,
+    "title": "Pirojpur Churashiyan — Event Platform",
+    "category": "Web Dev & Education",
+    "techStack": ["Django", "PostgreSQL", "Bootstrap", "JavaScript"],
+    "description": "Dynamic event registration and notification platform showing participant lists, built for large-scale community events in Bangladesh.",
+    "githubUrl": "https://github.com/injamam00155/churashiyan"
+  },
+  {
+    "id": 8,
+    "title": "Khaddya Bangla — Recipe Finder",
+    "category": "Web Dev & Education",
+    "techStack": ["HTML", "CSS", "JavaScript", "API Integration"],
+    "description": "Ingredient-based Bangladeshi recipe search app. Users search by ingredient and get matched recipes fetched from a structured JSON dataset.",
+    "githubUrl": "https://mis455-final-khaddo-bangla.netlify.app"
+  },
+  {
+    "id": 9,
+    "title": "E-School — Learning Platform",
+    "category": "Web Dev & Education",
+    "techStack": ["HTML", "CSS", "JavaScript"],
+    "description": "Frontend school management system enabling students to access classrooms, course materials, and resources online without hassle.",
+    "githubUrl": "https://mis455-2021397.netlify.app"
+  },
+  {
+    "id": 10,
+    "title": "ML Algorithms Collection",
+    "category": "AI & Research",
+    "techStack": ["Python", "Scikit-Learn", "NumPy", "Google Colab"],
+    "description": "Implementations of Root Finding, K-means Clustering, K-Nearest Neighbours, OLS Regression, Single Variable Regression, and Image Recognition models.",
+    "githubUrl": "https://github.com/injamam00155"
   }
 ]

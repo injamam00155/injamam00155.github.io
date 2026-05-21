@@ -2,13 +2,28 @@
   "name": "Injamam ul Haque",
   "tagline": "Building the future of tech, teaching it to the next generation, and researching what's next.",
   "roles": [
-    "Computer Science Educator @ Glenrich International",
-    "Full-Stack Developer",
-    "AI/ML Researcher",
-    "Founder @ Arc Study Pathways"
+    "Computer Science Faculty @ Glenrich International School",
+    "Full-Stack Developer & AI Engineer",
+    "IEEE Researcher — Computer Vision & Deep Learning",
+    "MSc CS Student @ IUB · CGPA 3.88"
   ],
-  "education": "BSc Computer Science, Independent University, Bangladesh (3.88 CGPA)",
+  "education": {
+    "masters": "MSc Computer Science, Independent University, Bangladesh (Ongoing)",
+    "bachelors": "BSc Computer Science, Independent University, Bangladesh (CGPA: 3.88, 2024)",
+    "aLevel": "A Level — Manarat Dhaka International College (2A* 2A, 2019)",
+    "oLevel": "O Level — Manarat Dhaka International College (6A* 3A, 2017)"
+  },
+  "awards": [
+    "Vice Chancellor's Honor List — IUB (2020, 2021, 2022)",
+    "Dean's Honor List — IUB (2020, 2022)",
+    "Dean's List — IUB (2020, 2021, 2022)",
+    "Winner — DBMS Project Showcase, TechFest IUB (2022)",
+    "CAIE A Level Daily Star Award (2019)",
+    "English Medium Math Olympiad — Academia (2018)",
+    "CAIE O Level Daily Star Award (2017)"
+  ],
   "email": "injamam00155@gmail.com",
+  "phone": "+8801319315405",
   "github": "https://github.com/injamam00155",
-  "linkedin": "https://linkedin.com/in/injamam-ul-haque"
+  "linkedin": "https://linkedin.com/in/injamam00155"
 }

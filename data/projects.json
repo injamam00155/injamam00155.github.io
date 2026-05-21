@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "title": "School Routine Planner & Substitution Engine",
+    "category": "Development & Education",
+    "techStack": ["Python", "Automation"],
+    "description": "Automated scheduling logic and teacher leave data management system.",
+    "githubUrl": "#"
+  },
+  {
+    "id": 2,
+    "title": "Automated Lead Generation Pipeline",
+    "category": "AI/MLOps & Business",
+    "techStack": ["n8n", "MLOps", "AI Agents"],
+    "description": "End-to-end automated workflows for lead tracking and conversion for consultancy operations.",
+    "githubUrl": "#"
+  },
+  {
+    "id": 3,
+    "title": "Student Performance Management System",
+    "category": "Development & Education",
+    "techStack": ["Python", "Django", "MySQL"],
+    "description": "Web-based platform for tracking, analyzing, and visualizing student academic performance data.",
+    "githubUrl": "#"
+  },
+  {
+    "id": 4,
+    "title": "E-School Learning Platform",
+    "category": "Development & Education",
+    "techStack": ["NodeJS", "MongoDB", "HTML/CSS"],
+    "description": "Full-stack e-learning platform with course management, student progress tracking, and interactive content delivery.",
+    "githubUrl": "#"
+  },
+  {
+    "id": 5,
+    "title": "Khaddo Bangla — Recipe Finder",
+    "category": "Development",
+    "techStack": ["Python", "API Integration"],
+    "description": "Ingredient-based Bangladeshi recipe search and discovery app with nutritional information.",
+    "githubUrl": "#"
+  },
+  {
+    "id": 6,
+    "title": "Sales Management Spreadsheet System",
+    "category": "Data & Business",
+    "techStack": ["Google Sheets", "Excel", "Automation"],
+    "description": "Advanced spreadsheet system with automated formulas, dashboards, and sales analytics for small businesses.",
+    "githubUrl": "#"
+  }
+]

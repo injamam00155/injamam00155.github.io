@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Academic Research — Injamam ul Haque. IEEE Access Q1 Journal Publications.">
+  <title>Research — Injamam ul Haque</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: { fontFamily: { sans: ['Inter','sans-serif'], mono: ['JetBrains Mono','monospace'] } } }
+    }
+  </script>
+  <style>
+    body { background-color: #080d1a; font-family: 'Inter', sans-serif; }
+    .glass {
+      background: rgba(15,23,42,0.75);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+    .gradient-text {
+      background: linear-gradient(135deg,#6366f1 0%,#8b5cf6 50%,#06b6d4 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .grid-pattern {
+      background-image:
+        linear-gradient(rgba(99,102,241,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(99,102,241,0.04) 1px, transparent 1px);
+      background-size: 64px 64px;
+    }
+    .orb { position:absolute; border-radius:50%; filter:blur(80px); pointer-events:none; z-index:0; }
+    .reveal { opacity:0; transform:translateY(24px); transition:opacity .7s ease, transform .7s ease; }
+    .reveal.visible { opacity:1; transform:translateY(0); }
+    .hover-scale { transition: transform .2s ease; }
+    .hover-scale:hover { transform: scale(1.01); }
+    #mobile-menu { display:none; }
+    #mobile-menu.open { display:block; }
+
+    /* Accordion */
+    .accordion-content { max-height: 0; overflow: hidden; transition: max-height .4s ease, opacity .4s ease; opacity: 0; }
+    .accordion-content.open { max-height: 500px; opacity: 1; }
+    .accordion-chevron { transition: transform .3s ease; }
+    .accordion-chevron.open { transform: rotate(180deg); }
+
+    /* Pub card border shimmer */
+    .pub-card { position: relative; }
+    .pub-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 1rem;
+      padding: 1px;
+      background: linear-gradient(135deg, rgba(6,182,212,.3), rgba(99,102,241,.1), rgba(6,182,212,.05));
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      opacity: 0;
+      transition: opacity .3s ease;
+    }
+    .pub-card:hover::before { opacity: 1; }
+  </style>
+</head>
+<body class="text-slate-100 antialiased min-h-screen">
+
+  <!-- NAVBAR -->
+  <nav class="glass fixed top-0 left-0 right-0 z-50 border-b border-white/5">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="index.html" class="flex items-center gap-2.5">
+          <div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white font-bold text-sm">IH</div>
+          <span class="font-semibold text-slate-100 hidden sm:block">Injamam ul Haque</span>
+        </a>
+        <div class="hidden md:flex items-center gap-1">
+          <a href="index.html" class="px-4 py-2 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg text-sm font-medium transition-all">Home</a>
+          <a href="dev-ai.html" class="px-4 py-2 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg text-sm font-medium transition-all">Dev/AI Lab</a>
+          <a href="research.html" class="px-4 py-2 text-white bg-white/5 rounded-lg text-sm font-medium transition-all">Research</a>
+          <a href="index.html#education" class="px-4 py-2 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg text-sm font-medium transition-all">Education</a>
+          <a href="index.html#contact" class="ml-2 px-5 py-2 bg-indigo-600 hover:bg-indigo-500 rounded-lg text-sm font-semibold transition-all hover:shadow-lg hover:shadow-indigo-500/20">Contact</a>
+        </div>
+        <button onclick="document.getElementById('mobile-menu').classList.toggle('open')" class="md:hidden p-2 text-slate-400 hover:text-white rounded-lg hover:bg-white/5 transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="md:hidden border-t border-white/5">
+      <div class="px-5 py-4 space-y-1">
+        <a href="index.html" class="block px-3 py-2.5 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg text-sm transition-all">Home</a>
+        <a href="dev-ai.html" class="block px-3 py-2.5 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg text-sm transition-all">Dev/AI Lab</a>
+        <a href="research.html" class="block px-3 py-2.5 text-white bg-white/5 rounded-lg text-sm">Research</a>
+        <a href="index.html#education" class="block px-3 py-2.5 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg text-sm transition-all">Education</a>
+        <a href="index.html#contact" class="block mt-2 px-3 py-2.5 bg-indigo-600 hover:bg-indigo-500 rounded-lg text-sm font-semibold text-center transition-all">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="relative pt-32 pb-20 px-5 sm:px-8 grid-pattern overflow-hidden">
+    <div class="orb w-[500px] h-[500px] top-[-100px] right-[-100px] bg-cyan-600/6"></div>
+    <div class="orb w-[400px] h-[400px] bottom-[-50px] left-[-100px] bg-indigo-600/6"></div>
+
+    <div class="relative z-10 max-w-4xl mx-auto text-center">
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-cyan-500/20 text-cyan-400 text-sm font-mono font-medium mb-8">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+        Academic Research Publications
+      </div>
+
+      <h1 class="text-5xl sm:text-6xl font-extrabold tracking-tight mb-6">
+        <span class="gradient-text">Research</span>
+        <span class="text-slate-50"> &amp; Publications</span>
+      </h1>
+      <p class="text-slate-400 text-lg max-w-2xl mx-auto mb-10">
+        Peer-reviewed work published in top-tier academic journals, exploring the frontiers of AI and machine learning.
+      </p>
+
+      <!-- IEEE Badge Row -->
+      <div class="flex flex-wrap items-center justify-center gap-4">
+        <div class="flex items-center gap-3 px-5 py-3 glass rounded-xl border border-cyan-500/15">
+          <div class="w-8 h-8 rounded-lg bg-cyan-500/15 flex items-center justify-center">
+            <span class="text-cyan-400 font-bold text-xs">Q1</span>
+          </div>
+          <div class="text-left">
+            <p class="text-slate-200 font-semibold text-sm">IEEE Access</p>
+            <p class="text-slate-500 text-xs">Q1 Journal · Impact Factor 3.9</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-3 px-5 py-3 glass rounded-xl border border-indigo-500/15">
+          <div class="w-8 h-8 rounded-lg bg-indigo-500/15 flex items-center justify-center">
+            <span class="text-indigo-400 font-bold text-xs font-mono">2+</span>
+          </div>
+          <div class="text-left">
+            <p class="text-slate-200 font-semibold text-sm">Publications</p>
+            <p class="text-slate-500 text-xs">Peer-reviewed · 2025</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PUBLICATIONS LIST -->
+  <section class="py-16 px-5 sm:px-8">
+    <div class="max-w-4xl mx-auto">
+      <div class="flex items-center justify-between mb-8 reveal">
+        <h2 class="text-2xl font-bold text-slate-100">All Publications</h2>
+        <span class="text-xs font-mono text-slate-500 px-3 py-1 glass rounded-full border border-white/5" id="pub-count">Loading...</span>
+      </div>
+
+      <div id="publications-container" class="space-y-5">
+        <!-- Publications rendered by JS -->
+        <div class="glass rounded-2xl p-8 border border-white/5 text-center">
+          <div class="w-8 h-8 border-2 border-indigo-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+          <p class="text-slate-400 text-sm">Loading publications...</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESEARCH INTERESTS -->
+  <section class="py-16 px-5 sm:px-8 border-t border-white/5">
+    <div class="max-w-4xl mx-auto reveal">
+      <h2 class="text-2xl font-bold text-slate-100 mb-8">Research Interests</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <div class="glass rounded-xl p-5 border border-white/5 hover:border-cyan-500/20 transition-all group">
+          <div class="w-10 h-10 rounded-lg bg-cyan-500/10 border border-cyan-500/15 flex items-center justify-center mb-4 group-hover:bg-cyan-500/20 transition-all">
+            <svg class="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17H3a2 2 0 01-2-2V5a2 2 0 012-2h14a2 2 0 012 2v10a2 2 0 01-2 2h-2"/></svg>
+          </div>
+          <h3 class="text-slate-100 font-semibold mb-2">Machine Learning</h3>
+          <p class="text-slate-400 text-sm">Deep learning architectures, model optimization, and practical ML deployment strategies.</p>
+        </div>
+        <div class="glass rounded-xl p-5 border border-white/5 hover:border-violet-500/20 transition-all group">
+          <div class="w-10 h-10 rounded-lg bg-violet-500/10 border border-violet-500/15 flex items-center justify-center mb-4 group-hover:bg-violet-500/20 transition-all">
+            <svg class="w-5 h-5 text-violet-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"/></svg>
+          </div>
+          <h3 class="text-slate-100 font-semibold mb-2">AI Systems</h3>
+          <p class="text-slate-400 text-sm">Intelligent agent architectures, automation pipelines, and AI-human interaction models.</p>
+        </div>
+        <div class="glass rounded-xl p-5 border border-white/5 hover:border-indigo-500/20 transition-all group">
+          <div class="w-10 h-10 rounded-lg bg-indigo-500/10 border border-indigo-500/15 flex items-center justify-center mb-4 group-hover:bg-indigo-500/20 transition-all">
+            <svg class="w-5 h-5 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+          </div>
+          <h3 class="text-slate-100 font-semibold mb-2">EdTech &amp; AI</h3>
+          <p class="text-slate-400 text-sm">Application of AI in educational technology, adaptive learning systems, and academic performance prediction.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-white/5 py-8 px-5 sm:px-8">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
+      <p class="text-slate-500 text-sm">© 2025 Injamam ul Haque. All rights reserved.</p>
+      <p class="text-slate-700 text-xs font-mono">HTML · Tailwind CSS · Vanilla JS · GitHub Pages</p>
+    </div>
+  </footer>
+
+  <script>
+    // Scroll reveal
+    const obs = new IntersectionObserver(
+      entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
+      { threshold: 0.1 }
+    );
+    document.querySelectorAll('.reveal').forEach(e => obs.observe(e));
+
+    // Accordion toggle
+    function toggleAccordion(id) {
+      const content = document.getElementById('abstract-' + id);
+      const chevron = document.getElementById('chevron-' + id);
+      const isOpen = content.classList.contains('open');
+      // close all
+      document.querySelectorAll('.accordion-content').forEach(el => el.classList.remove('open'));
+      document.querySelectorAll('.accordion-chevron').forEach(el => el.classList.remove('open'));
+      if (!isOpen) {
+        content.classList.add('open');
+        chevron.classList.add('open');
+      }
+    }
+
+    // Render publications
+    function renderPublications(pubs) {
+      const container = document.getElementById('publications-container');
+      const countEl = document.getElementById('pub-count');
+      countEl.textContent = pubs.length + ' papers';
+
+      const colorMap = {
+        0: { border: 'border-cyan-500/20', badge: 'bg-cyan-500/10 border-cyan-500/20 text-cyan-400', btn: 'bg-cyan-500/10 border-cyan-500/20 text-cyan-400 hover:bg-cyan-500/20', num: 'text-cyan-400' },
+        1: { border: 'border-indigo-500/20', badge: 'bg-indigo-500/10 border-indigo-500/20 text-indigo-400', btn: 'bg-indigo-500/10 border-indigo-500/20 text-indigo-400 hover:bg-indigo-500/20', num: 'text-indigo-400' },
+      };
+
+      container.innerHTML = pubs.map((pub, i) => {
+        const c = colorMap[i % 2];
+        return `
+          <div class="pub-card glass rounded-2xl border border-white/5 hover:${c.border} transition-all reveal overflow-hidden" style="transition-delay: ${i * 100}ms">
+            <div class="p-6 sm:p-8">
+              <!-- Header row -->
+              <div class="flex items-start gap-4 mb-4">
+                <div class="flex-shrink-0 w-10 h-10 rounded-xl ${c.badge.replace('text-','').split(' ').slice(0,2).join(' ')} bg-opacity-10 border flex items-center justify-center">
+                  <span class="font-bold text-sm font-mono ${c.num}">${String(i+1).padStart(2,'0')}</span>
+                </div>
+                <div class="flex-1 min-w-0">
+                  <h3 class="text-slate-100 font-bold text-lg leading-snug">${pub.title}</h3>
+                  <div class="flex flex-wrap items-center gap-2 mt-2">
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full ${c.badge} border text-xs font-mono font-semibold">
+                      <span class="w-1.5 h-1.5 rounded-full bg-current"></span>
+                      ${pub.journal}
+                    </span>
+                    <span class="px-2.5 py-1 rounded-full bg-slate-700/40 border border-slate-600/30 text-slate-400 text-xs font-mono">${pub.date}</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Abstract accordion trigger -->
+              <button
+                onclick="toggleAccordion(${pub.id})"
+                class="flex items-center gap-2 text-sm text-slate-400 hover:text-slate-200 transition-colors mt-2 mb-1 group"
+              >
+                <svg id="chevron-${pub.id}" class="accordion-chevron w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                </svg>
+                <span class="font-medium group-hover:underline">View Abstract</span>
+              </button>
+
+              <!-- Abstract content -->
+              <div id="abstract-${pub.id}" class="accordion-content">
+                <div class="mt-3 p-4 rounded-xl bg-slate-800/50 border border-slate-700/30">
+                  <p class="text-slate-300 text-sm leading-relaxed">${pub.abstract}</p>
+                </div>
+              </div>
+
+              <!-- Action buttons -->
+              <div class="flex flex-wrap gap-3 mt-5 pt-5 border-t border-white/5">
+                <a href="${pub.doi}" target="_blank" rel="noopener"
+                   class="inline-flex items-center gap-2 px-4 py-2 ${c.btn} border rounded-lg text-xs font-semibold font-mono transition-all">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                  DOI Link
+                </a>
+                <a href="${pub.pdfLink}" target="_blank" rel="noopener"
+                   class="inline-flex items-center gap-2 px-4 py-2 bg-slate-700/40 border border-slate-600/30 hover:border-slate-500/50 rounded-lg text-slate-300 text-xs font-semibold font-mono transition-all hover:text-slate-100">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                  PDF
+                </a>
+                <span class="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg text-slate-500 text-xs font-mono">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                  Peer Reviewed
+                </span>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      // Re-observe new elements
+      document.querySelectorAll('.reveal').forEach(e => obs.observe(e));
+    }
+
+    // Fetch publications
+    fetch('./data/publications.json')
+      .then(r => r.json())
+      .then(renderPublications)
+      .catch(() => {
+        document.getElementById('publications-container').innerHTML = `
+          <div class="glass rounded-2xl p-8 border border-white/5 text-center">
+            <p class="text-slate-400 text-sm">Could not load publications. Please check back later.</p>
+          </div>
+        `;
+        document.getElementById('pub-count').textContent = '0 papers';
+      });
+  </script>
+</body>
+</html>

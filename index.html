@@ -1,274 +1,366 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-
-    <title>Inja Personal Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Injamam ul Haque — CS Educator, Full-Stack Developer, AI/ML Researcher, and Founder of Arc Study Pathways.">
+  <title>Injamam ul Haque — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: { fontFamily: { sans: ['Inter','sans-serif'], mono: ['JetBrains Mono','monospace'] } } }
+    }
+  </script>
+  <style>
+    body { background-color: #080d1a; font-family: 'Inter', sans-serif; }
+    .glass {
+      background: rgba(15,23,42,0.75);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+    .gradient-text {
+      background: linear-gradient(135deg,#6366f1 0%,#8b5cf6 50%,#06b6d4 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .grid-pattern {
+      background-image:
+        linear-gradient(rgba(99,102,241,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(99,102,241,0.04) 1px, transparent 1px);
+      background-size: 64px 64px;
+    }
+    .orb { position:absolute; border-radius:50%; filter:blur(80px); pointer-events:none; z-index:0; }
+    .glow-indigo { transition: all .3s ease; }
+    .glow-indigo:hover { box-shadow:0 0 40px rgba(99,102,241,.15); border-color:rgba(99,102,241,.4) !important; }
+    .glow-violet { transition: all .3s ease; }
+    .glow-violet:hover { box-shadow:0 0 40px rgba(139,92,246,.15); border-color:rgba(139,92,246,.4) !important; }
+    .glow-cyan { transition: all .3s ease; }
+    .glow-cyan:hover { box-shadow:0 0 40px rgba(6,182,212,.15); border-color:rgba(6,182,212,.4) !important; }
+    .glow-emerald { transition: all .3s ease; }
+    .glow-emerald:hover { box-shadow:0 0 40px rgba(16,185,129,.15); border-color:rgba(16,185,129,.4) !important; }
+    .typing-cursor::after { content:'|'; animation:blink 1s step-end infinite; color:#6366f1; }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+    .reveal { opacity:0; transform:translateY(24px); transition:opacity .7s ease, transform .7s ease; }
+    .reveal.visible { opacity:1; transform:translateY(0); }
+    .hover-scale { transition: transform .2s ease; }
+    .hover-scale:hover { transform: scale(1.02); }
+    #mobile-menu { display:none; }
+    #mobile-menu.open { display:block; }
+  </style>
 </head>
-<body>
-    <!-- HEADER -->
-    <div id="header">
-        <div class ="container">
-            <nav>
-                <img src="images\inja_logo.png" class="logo">
-                <ul id='sidemenu'>
-                    <li><a href="#header">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <i class="fas fa-times" onclick="closemenu()"></i>
-                </ul>
-                <i class="fas fa-bars" onclick="openmenu()"></i>
-            </nav>
+<body class="text-slate-100 antialiased min-h-screen">
+
+  <!-- NAVBAR -->
+  <nav class="glass fixed top-0 left-0 right-0 z-50 border-b border-white/5">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="index.html" class="flex items-center gap-2.5">
+          <div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white font-bold text-sm">IH</div>
+          <span class="font-semibold text-slate-100 hidden sm:block">Injamam ul Haque</span>
+        </a>
+        <div class="hidden md:flex items-center gap-1">
+          <a href="index.html" class="px-4 py-2 text-white bg-white/5 rounded-lg text-sm font-medium transition-all">Home</a>
+          <a href="dev-ai.html" class="px-4 py-2 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg text-sm font-medium transition-all">Dev/AI Lab</a>
+          <a href="research.html" class="px-4 py-2 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg text-sm font-medium transition-all">Research</a>
+          <a href="#education" class="px-4 py-2 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg text-sm font-medium transition-all">Education</a>
+          <a href="#contact" class="ml-2 px-5 py-2 bg-indigo-600 hover:bg-indigo-500 rounded-lg text-sm font-semibold transition-all hover:shadow-lg hover:shadow-indigo-500/20">Contact</a>
         </div>
-            <div class="header-text">
-                <h1>
-                    STUDENT
-                </h1>
-                <h2>
-                    Hola, I'm <span>Injamam</span> <br> from Bangladesh
-                </h2>
+        <button onclick="document.getElementById('mobile-menu').classList.toggle('open')" class="md:hidden p-2 text-slate-400 hover:text-white rounded-lg hover:bg-white/5 transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="md:hidden border-t border-white/5">
+      <div class="px-5 py-4 space-y-1">
+        <a href="index.html" class="block px-3 py-2.5 text-white bg-white/5 rounded-lg text-sm">Home</a>
+        <a href="dev-ai.html" class="block px-3 py-2.5 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg text-sm transition-all">Dev/AI Lab</a>
+        <a href="research.html" class="block px-3 py-2.5 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg text-sm transition-all">Research</a>
+        <a href="#education" class="block px-3 py-2.5 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg text-sm transition-all">Education</a>
+        <a href="#contact" class="block mt-2 px-3 py-2.5 bg-indigo-600 hover:bg-indigo-500 rounded-lg text-sm font-semibold text-center transition-all">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="relative min-h-screen flex items-center justify-center grid-pattern pt-16 overflow-hidden">
+    <div class="orb w-[600px] h-[600px] top-[-150px] left-[-200px] bg-indigo-600/8"></div>
+    <div class="orb w-[500px] h-[500px] bottom-[-100px] right-[-150px] bg-violet-600/8"></div>
+    <div class="orb w-[300px] h-[300px] top-[35%] right-[15%] bg-cyan-600/5"></div>
+
+    <div class="relative z-10 max-w-5xl mx-auto px-5 sm:px-8 text-center">
+      <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full glass border border-indigo-500/15 text-indigo-400 text-sm font-medium mb-10">
+        <span class="relative flex h-2 w-2">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-green-400"></span>
+        </span>
+        Available for research collaboration &amp; projects
+      </div>
+
+      <h1 class="text-5xl sm:text-6xl lg:text-8xl font-extrabold tracking-tight mb-4 leading-none">
+        <span class="text-slate-50">Injamam</span><br>
+        <span class="gradient-text">ul Haque</span>
+      </h1>
+
+      <div class="h-10 sm:h-12 flex items-center justify-center mb-6">
+        <p class="text-base sm:text-lg font-mono text-slate-400">
+          <span class="text-indigo-400 font-medium" id="typing-text"></span><span class="typing-cursor"></span>
+        </p>
+      </div>
+
+      <p class="text-slate-400 text-lg sm:text-xl max-w-2xl mx-auto mb-12 leading-relaxed">
+        Building the future of tech, teaching it to the next generation,<br class="hidden sm:block"> and researching what's next.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <a href="dev-ai.html" class="group w-full sm:w-auto px-8 py-4 bg-indigo-600 hover:bg-indigo-500 rounded-xl font-semibold text-white transition-all hover:scale-105 hover:shadow-2xl hover:shadow-indigo-500/25 flex items-center justify-center gap-2">
+          View Tech Stack
+          <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+        <a href="research.html" class="group w-full sm:w-auto px-8 py-4 glass border border-slate-600/50 hover:border-indigo-500/50 rounded-xl font-semibold transition-all hover:scale-105 flex items-center justify-center gap-2">
+          Read Publications
+          <svg class="w-4 h-4 text-slate-400 group-hover:text-indigo-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+        </a>
+      </div>
+
+      <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+        <svg class="w-5 h-5 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 PILLARS -->
+  <section class="py-28 px-5 sm:px-8">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16 reveal">
+        <p class="font-mono text-xs text-indigo-400 tracking-[.2em] uppercase mb-3">Core Expertise</p>
+        <h2 class="text-4xl sm:text-5xl font-bold text-slate-50 mb-4">Four Pillars of Work</h2>
+        <p class="text-slate-400 max-w-lg mx-auto">Where academia, industry, and entrepreneurship intersect.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+        <!-- 1: Web Dev -->
+        <a href="dev-ai.html" class="group glass rounded-2xl p-8 border border-white/5 glow-indigo hover-scale block reveal">
+          <div class="flex items-start justify-between mb-6">
+            <div class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center group-hover:bg-indigo-500/20 transition-all">
+              <svg class="w-6 h-6 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
             </div>
-        </div>
-    </div>
-    <!-- About -->
-    <div id="about">
-        <div class="row">
-            <div class="about-col-1">
-                <img src="images/user.jpg">
+            <span class="text-xs font-mono text-slate-600 group-hover:text-indigo-400 transition-colors">01</span>
+          </div>
+          <h3 class="text-xl font-bold text-slate-100 group-hover:text-indigo-300 transition-colors mb-3">Web Dev &amp; Architecture</h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-6">Full-stack development spanning database architecture to pixel-perfect UIs. Building scalable, production-ready systems with modern frameworks.</p>
+          <div class="flex flex-wrap gap-2 mb-6">
+            <span class="px-2.5 py-1 bg-indigo-500/10 border border-indigo-500/15 rounded-md text-indigo-400 text-xs font-mono">Python</span>
+            <span class="px-2.5 py-1 bg-indigo-500/10 border border-indigo-500/15 rounded-md text-indigo-400 text-xs font-mono">Django</span>
+            <span class="px-2.5 py-1 bg-indigo-500/10 border border-indigo-500/15 rounded-md text-indigo-400 text-xs font-mono">NodeJS</span>
+            <span class="px-2.5 py-1 bg-indigo-500/10 border border-indigo-500/15 rounded-md text-indigo-400 text-xs font-mono">MySQL</span>
+            <span class="px-2.5 py-1 bg-indigo-500/10 border border-indigo-500/15 rounded-md text-indigo-400 text-xs font-mono">MongoDB</span>
+          </div>
+          <div class="flex items-center gap-2 text-indigo-400 text-sm font-medium">
+            View Projects <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </div>
+        </a>
+
+        <!-- 2: AI Lab -->
+        <a href="dev-ai.html" class="group glass rounded-2xl p-8 border border-white/5 glow-violet hover-scale block reveal">
+          <div class="flex items-start justify-between mb-6">
+            <div class="w-12 h-12 rounded-xl bg-violet-500/10 border border-violet-500/20 flex items-center justify-center group-hover:bg-violet-500/20 transition-all">
+              <svg class="w-6 h-6 text-violet-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
             </div>
-            <div class="about-col-2">
-                <h1 class="subtitle">About Me</h1>
-                <div class="about-tabs">
-                    <p class="about-links active-links" onclick="opentab('skills')">
-                        Skills
-                    </p>
-                    <p class="about-links" onclick="opentab('education')">
-                        Education
-                    </p>
-                    <p class="about-links" onclick="opentab('experience')">
-                        Experience
-                    </p>
-                </div>
-                <div class="about-contents active-contents" id="skills">
-                    <ul>
-                        <li>
-                            <span>Spreadsheet</span><br>
-                            Expertise in Google sheets and MS Excel.
-                        </li>
-                        <li>
-                            <span>Database</span><br>
-                            Experience in MySQL and MongoDB.
-                        </li>
-                        <li>
-                            <span>Web Development</span><br>
-                            Expertise in HTML, CSS, Bootstrap. Also experienced in frameworks like NodeJS and Django. 
-                        </li>
-                        <li>
-                            <span>Coding and Debugging</span><br>
-                            Code and Debug in C, C++, Python and Java.
-                        </li>
-                        <li>
-                            <span>Visuals</span><br>
-                            Equip knowledge about Adobe Illustrator and Adobe Photoshop.
-                        </li>
-                    </ul>
-                </div>
+            <span class="text-xs font-mono text-slate-600 group-hover:text-violet-400 transition-colors">02</span>
+          </div>
+          <h3 class="text-xl font-bold text-slate-100 group-hover:text-violet-300 transition-colors mb-3">AI &amp; Vibecoding Lab</h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-6">Building intelligent automation pipelines, AI agents, and MLOps workflows. Turning cutting-edge AI research into production-ready systems.</p>
+          <div class="flex flex-wrap gap-2 mb-6">
+            <span class="px-2.5 py-1 bg-violet-500/10 border border-violet-500/15 rounded-md text-violet-400 text-xs font-mono">n8n</span>
+            <span class="px-2.5 py-1 bg-violet-500/10 border border-violet-500/15 rounded-md text-violet-400 text-xs font-mono">MLOps</span>
+            <span class="px-2.5 py-1 bg-violet-500/10 border border-violet-500/15 rounded-md text-violet-400 text-xs font-mono">AI Agents</span>
+            <span class="px-2.5 py-1 bg-violet-500/10 border border-violet-500/15 rounded-md text-violet-400 text-xs font-mono">LLMs</span>
+            <span class="px-2.5 py-1 bg-violet-500/10 border border-violet-500/15 rounded-md text-violet-400 text-xs font-mono">Automation</span>
+          </div>
+          <div class="flex items-center gap-2 text-violet-400 text-sm font-medium">
+            Explore Lab <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </div>
+        </a>
 
-                <div class="about-contents"  id="education">
-                    <ul>
-                        <li>
-                            <span>BSc. in Computer Science at IUB.</span><br>
-                            Current <br>
-                            CGPA: 3.92
-                        </li>
-                        <li>
-                            <span>A levels - Manarat Dhaka International College.</span><br>
-                            Year: 2019 <br>
-                            Grade: 2A*, 2A
-                        </li>
-                        <li>
-                            <span>O levels - Manarat Dhaka International College.</span><br>
-                            Year: 2017 <br>
-                            Grade: 6A*, 3A
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="about-contents"  id="experience">
-                    <ul>
-                        <li>
-                            <span>2016 - 2019</span><br>
-                            Freelancer at Fiverr and Freelancer.com .
-                        </li>
-                        <li>
-                            <span>2017 - Current</span><br>
-                            Home tutoring students and being Teaching and Lab Assistant to Professors.
-                        </li>
-                        <li>
-                            <span>2022 - Current</span><br>
-                            PR Sub Executive at JUKTI 
-                        </li>
-                    </ul>
-                </div>
+        <!-- 3: Research -->
+        <a href="research.html" class="group glass rounded-2xl p-8 border border-white/5 glow-cyan hover-scale block reveal">
+          <div class="flex items-start justify-between mb-6">
+            <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center group-hover:bg-cyan-500/20 transition-all">
+              <svg class="w-6 h-6 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
             </div>
-
-        </div>
-    </div>
-    <!-- Services -->
-    <div id="services">
-        <div class="container">
-            <h1 class="subtitle">Services I provide</h1>
-            <div class="services-list">
-                <div>
-                    <h1>📚🎓👩‍🏫</h1>
-                    <h2>Home Tutoring </h2>
-                    <p>
-                        I provide tutions to CAIE O level and A level students. 
-                    </p>
-                    <a href="#">Learn More</a>
-                </div>
-                <div>
-                    <h1>📊📈🔍</h1>
-                    <h2>Data Entry </h2>
-                    <p>
-                        I provide tutions to CAIE O level and A level students. 
-                    </p>
-                    <a href="#">Learn More</a>
-                </div>
-                <div>
-                    <h1>🌐💻🔧</h1>
-                    <h2>Building Websites </h2>
-                    <p>
-                        I provide tutions to CAIE O level and A level students. 
-                    </p>
-                    <a href="#">Learn More</a>
-                </div>
-        </div>
-    </div>
-    <!-- Portfolio -->
-    <div id="portfolio">
-        <div class="container">
-            <h1 class="subtitle">  Work</h1>
-            <div class="work-list">
-                <div class="work">
-                    <img src="images/work1.jpg">
-                    <div class="layer">
-                        <h3>Spreadsheet</h3>
-                        <p>Spreadsheet work to manage Sales</p>
-                        <a href="#">🔗</a>
-                    </div>
-                </div>
-                <div  class="work">
-                    <img src="images/work2.png">
-                    <div class="layer">
-                        <h3>SPMS</h3>
-                        <p>Student Performance Management System</p>
-                        <a href="#">🔗</a>
-                    </div>
-                </div>
-                <div  class="work">
-                    <img src="images/work3.png">
-                    <div class="layer">
-                        <h3>Khaddo Bangla</h3>
-                        <p>A website to find ingredients and recipes of something we are willing to find</p>
-                        <a href="#">🔗</a>
-                    </div>
-                </div>
-                <div  class="work">
-                    <img src="images/work4.png">
-                    <div class="layer">
-                        <h3>E-School</h3>
-                        <p>Online Learning Platform</p>
-                        <a href="#">🔗</a>
-                    </div>
-                </div>
-                <div  class="work">
-                    <img src="images/work5.png">
-                    <div class="layer">
-                        <h3>Chef's Table</h3>
-                        <p>Simulation of Chef's table food court online site</p>
-                        <a href="#">🔗</a>
-                    </div>
-                </div>
-                <div  class="work">
-                    <img src="images/work6.png">
-                    <div class="layer">
-                        <h3>Spreadsheet</h3>
-                        <p>Spreadsheet to manage tournament Fixture</p>
-                        <a href="#">🔗</a>
-                    </div>
-                </div>
-        </div>
-    </div>
-
-    <!-- Contact -->
-
-    <div id="contact">
-        <div class="container">
-            <h1 class="subtitle">Contact Me</h1><br>
-            <div class="row">
-                <div class="contact-left">
-                    <p>📧 injamam00155@gmail.com</p>
-                    <p>📱 01689073801</p><br>
-                    <div class="social-icons">
-                        <a href="https://www.facebook.com/injamam00155/"> <img src="images/fb.png"></a>
-                        <a href="https://github.com/injamam00155"><img src="images/github.png"></a>
-                        <a href="https://www.linkedin.com/in/injamam00155/"><img src="images/linkedin.png"></a>
-                    </div>
-                </div>
-                <div class="contact-right">
-                    <form>
-                        <input type="text" name="Name" placeholder="Name" required>
-                        <input type="email" name="Email" placeholder="Email" required>
-                        <input name="message" name="message" placeholder="Your Message">
-                        <button type="Submit" class="btn btn2" >SUBMIT</button>
-                    </form>
-                </div>
+            <div class="flex flex-col items-end gap-1">
+              <span class="text-xs font-mono text-slate-600 group-hover:text-cyan-400 transition-colors">03</span>
+              <span class="px-2 py-0.5 bg-cyan-500/10 border border-cyan-500/20 rounded text-cyan-400 text-[10px] font-mono font-bold">Q1</span>
             </div>
+          </div>
+          <h3 class="text-xl font-bold text-slate-100 group-hover:text-cyan-300 transition-colors mb-3">Academic Research</h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-6">Published researcher in IEEE Access (Q1 Journal). Investigating the intersection of AI, machine learning, and real-world applications.</p>
+          <div class="flex flex-wrap gap-2 mb-6">
+            <span class="px-2.5 py-1 bg-cyan-500/10 border border-cyan-500/15 rounded-md text-cyan-400 text-xs font-mono">IEEE Access</span>
+            <span class="px-2.5 py-1 bg-cyan-500/10 border border-cyan-500/15 rounded-md text-cyan-400 text-xs font-mono">Machine Learning</span>
+            <span class="px-2.5 py-1 bg-cyan-500/10 border border-cyan-500/15 rounded-md text-cyan-400 text-xs font-mono">Deep Learning</span>
+          </div>
+          <div class="flex items-center gap-2 text-cyan-400 text-sm font-medium">
+            View Publications <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </div>
+        </a>
+
+        <!-- 4: Education -->
+        <div class="group glass rounded-2xl p-8 border border-white/5 glow-emerald hover-scale reveal" id="education">
+          <div class="flex items-start justify-between mb-6">
+            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center group-hover:bg-emerald-500/20 transition-all">
+              <svg class="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+            </div>
+            <span class="text-xs font-mono text-slate-600 group-hover:text-emerald-400 transition-colors">04</span>
+          </div>
+          <h3 class="text-xl font-bold text-slate-100 group-hover:text-emerald-300 transition-colors mb-3">CS Education</h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-6">Computer Science Educator at Glenrich International School, delivering the CAIE curriculum with a focus on computational thinking, programming, and digital literacy.</p>
+          <div class="flex flex-wrap gap-2 mb-6">
+            <span class="px-2.5 py-1 bg-emerald-500/10 border border-emerald-500/15 rounded-md text-emerald-400 text-xs font-mono">CAIE</span>
+            <span class="px-2.5 py-1 bg-emerald-500/10 border border-emerald-500/15 rounded-md text-emerald-400 text-xs font-mono">IGCSE / A-Level</span>
+            <span class="px-2.5 py-1 bg-emerald-500/10 border border-emerald-500/15 rounded-md text-emerald-400 text-xs font-mono">Mentorship</span>
+          </div>
+          <div class="flex items-center gap-2 px-3 py-1.5 bg-emerald-500/10 border border-emerald-500/20 rounded-lg w-fit">
+            <span class="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse"></span>
+            <span class="text-emerald-400 text-xs font-medium">Glenrich International School</span>
+          </div>
         </div>
 
+      </div>
     </div>
+  </section>
+
+  <!-- JOURNEY + STATS -->
+  <section class="py-24 px-5 sm:px-8 border-t border-white/5">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+
+        <div class="reveal">
+          <p class="font-mono text-xs text-indigo-400 tracking-[.2em] uppercase mb-3">Background</p>
+          <h2 class="text-3xl sm:text-4xl font-bold text-slate-50 mb-10">Education &amp; Journey</h2>
+          <div class="relative pl-8">
+            <div class="absolute left-2.5 top-2 bottom-2 w-px bg-gradient-to-b from-indigo-500 via-cyan-500 via-emerald-500 to-amber-500"></div>
+            <div class="space-y-10">
+              <div class="relative">
+                <div class="absolute -left-8 top-1 w-5 h-5 rounded-full border-2 border-indigo-500 bg-[#080d1a] flex items-center justify-center"><div class="w-2 h-2 rounded-full bg-indigo-500"></div></div>
+                <p class="text-slate-50 font-semibold text-lg">BSc Computer Science</p>
+                <p class="text-indigo-400 text-sm font-medium mt-0.5">Independent University, Bangladesh</p>
+                <p class="text-slate-500 text-sm mt-1">CGPA: 3.88 · Currently Enrolled</p>
+              </div>
+              <div class="relative">
+                <div class="absolute -left-8 top-1 w-5 h-5 rounded-full border-2 border-emerald-500 bg-[#080d1a] flex items-center justify-center"><div class="w-2 h-2 rounded-full bg-emerald-500"></div></div>
+                <p class="text-slate-50 font-semibold text-lg">CS Educator</p>
+                <p class="text-emerald-400 text-sm font-medium mt-0.5">Glenrich International School</p>
+                <p class="text-slate-500 text-sm mt-1">Teaching CAIE Computer Science · Present</p>
+              </div>
+              <div class="relative">
+                <div class="absolute -left-8 top-1 w-5 h-5 rounded-full border-2 border-cyan-500 bg-[#080d1a] flex items-center justify-center"><div class="w-2 h-2 rounded-full bg-cyan-500"></div></div>
+                <p class="text-slate-50 font-semibold text-lg">IEEE Researcher</p>
+                <p class="text-cyan-400 text-sm font-medium mt-0.5">IEEE Access — Q1 Journal</p>
+                <p class="text-slate-500 text-sm mt-1">2+ Published Papers · 2025</p>
+              </div>
+              <div class="relative">
+                <div class="absolute -left-8 top-1 w-5 h-5 rounded-full border-2 border-amber-500 bg-[#080d1a] flex items-center justify-center"><div class="w-2 h-2 rounded-full bg-amber-500"></div></div>
+                <p class="text-slate-50 font-semibold text-lg">Founder</p>
+                <p class="text-amber-400 text-sm font-medium mt-0.5">Arc Study Pathways</p>
+                <p class="text-slate-500 text-sm mt-1">Educational consultancy &amp; tech platform</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal grid grid-cols-2 gap-4">
+          <div class="glass rounded-2xl p-6 border border-white/5 text-center hover-scale">
+            <p class="text-5xl font-extrabold gradient-text mb-2">3.88</p>
+            <p class="text-slate-400 text-sm">University CGPA</p>
+          </div>
+          <div class="glass rounded-2xl p-6 border border-white/5 text-center hover-scale">
+            <p class="text-5xl font-extrabold text-cyan-400 mb-2">2+</p>
+            <p class="text-slate-400 text-sm">IEEE Publications</p>
+          </div>
+          <div class="glass rounded-2xl p-6 border border-white/5 text-center hover-scale">
+            <p class="text-5xl font-extrabold text-violet-400 mb-2">6+</p>
+            <p class="text-slate-400 text-sm">Projects Built</p>
+          </div>
+          <div class="glass rounded-2xl p-6 border border-white/5 text-center hover-scale">
+            <p class="text-5xl font-extrabold text-amber-400 mb-2">Q1</p>
+            <p class="text-slate-400 text-sm">Research Tier</p>
+          </div>
+          <div class="col-span-2 glass rounded-2xl p-6 border border-amber-500/10 flex items-center gap-5">
+            <div class="w-14 h-14 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center flex-shrink-0">
+              <svg class="w-7 h-7 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+            </div>
+            <div>
+              <p class="text-slate-100 font-semibold">Arc Study Pathways</p>
+              <p class="text-slate-400 text-sm mt-0.5">Founder &amp; Tech Lead · Bridging academic guidance and AI-driven learning.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
-</div>
-    <div class="footer">
-            Copyright @ injamam00155
+  </section>
+
+  <!-- CONTACT -->
+  <section class="py-24 px-5 sm:px-8 border-t border-white/5" id="contact">
+    <div class="max-w-3xl mx-auto text-center">
+      <p class="font-mono text-xs text-indigo-400 tracking-[.2em] uppercase mb-3">Get In Touch</p>
+      <h2 class="text-4xl sm:text-5xl font-bold text-slate-50 mb-4">Let's Build Something</h2>
+      <p class="text-slate-400 mb-12 text-lg max-w-xl mx-auto">Open to research collaborations, full-stack projects, speaking engagements, and educational partnerships.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="mailto:injamam00155@gmail.com" class="group px-8 py-4 bg-indigo-600 hover:bg-indigo-500 rounded-xl font-semibold transition-all hover:scale-105 hover:shadow-2xl hover:shadow-indigo-500/25 flex items-center justify-center gap-2">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          Send Email
+        </a>
+        <a href="https://github.com/injamam00155" target="_blank" rel="noopener" class="px-8 py-4 glass border border-slate-600/50 hover:border-slate-400/50 rounded-xl font-semibold transition-all hover:scale-105 flex items-center justify-center gap-2">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+          GitHub
+        </a>
+        <a href="https://linkedin.com/in/injamam-ul-haque" target="_blank" rel="noopener" class="px-8 py-4 glass border border-slate-600/50 hover:border-blue-500/50 rounded-xl font-semibold transition-all hover:scale-105 flex items-center justify-center gap-2">
+          <svg class="w-4 h-4 text-blue-400" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          LinkedIn
+        </a>
+      </div>
     </div>
+  </section>
 
-    <script>
-        var aboutlinks = document.getElementsByClassName('about-links');
-        var aboutcontents = document.getElementsByClassName('about-contents');
+  <!-- FOOTER -->
+  <footer class="border-t border-white/5 py-8 px-5 sm:px-8">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
+      <p class="text-slate-500 text-sm">© 2025 Injamam ul Haque. All rights reserved.</p>
+      <p class="text-slate-700 text-xs font-mono">HTML · Tailwind CSS · Vanilla JS · GitHub Pages</p>
+    </div>
+  </footer>
 
-        function opentab(tabname)
-        {
-            for(aboutlink of aboutlinks)
-            {
-                aboutlink.classList.remove('active-links');
-            }
-            for(aboutcontent of aboutcontents)
-            {
-                aboutcontent.classList.remove('active-contents');
-            }
-            event.currentTarget.classList.add("active-links");
-            document.getElementById(tabname).classList.add("active-contents");
-        }
-    </script>
-    <script>
-        var sidemenu = document.getElementById('sidemenu');
+  <script>
+    // Typing animation
+    const roles = [
+      "Computer Science Educator @ Glenrich International",
+      "Full-Stack Developer",
+      "AI/ML Researcher",
+      "Founder @ Arc Study Pathways"
+    ];
+    let ri = 0, ci = 0, del = false;
+    const el = document.getElementById('typing-text');
+    function type() {
+      const cur = roles[ri];
+      el.textContent = del ? cur.substring(0, --ci) : cur.substring(0, ++ci);
+      if (!del && ci === cur.length) { setTimeout(() => { del = true; type(); }, 2500); return; }
+      if (del && ci === 0) { del = false; ri = (ri + 1) % roles.length; }
+      setTimeout(type, del ? 35 : 75);
+    }
+    type();
 
-        function openmenu() {
-            sidemenu.style.right = "0";
-        }
-
-        function closemenu() {
-            sidemenu.style.right = "-200px";
-        }
-    </script>
-
+    // Scroll reveal
+    const obs = new IntersectionObserver(
+      entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
+      { threshold: 0.1 }
+    );
+    document.querySelectorAll('.reveal').forEach(e => obs.observe(e));
+  </script>
 </body>
 </html>

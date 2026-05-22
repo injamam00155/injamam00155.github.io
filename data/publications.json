@@ -6,7 +6,7 @@
     "date": "May 2024",
     "abstract": "This paper presents BIDNet, a custom Convolutional Neural Network architecture designed for real-time facemask detection in surveillance scenarios. The proposed model addresses the growing need for automated public health compliance monitoring by achieving high detection accuracy across varied lighting conditions, occlusions, and face orientations. The system integrates seamlessly with existing CCTV infrastructure, making it a practical and scalable solution for smart city deployments.",
     "doi": "10.1109/ACCESS.2024.3407534",
-    "doiLink": "https://ieeexplore.ieee.org/document/10542134",
+    "doiLink": "https://doi.org/10.1109/ACCESS.2024.3407534",
     "pdfLink": "https://ieeexplore.ieee.org/document/10542134"
   },
   {
@@ -16,7 +16,7 @@
     "date": "July 2024",
     "abstract": "This study proposes a robust hybrid LSTM-DNN model for stock market prediction, rigorously evaluated across 26 real-life datasets spanning multiple sectors and markets. The model demonstrates superior performance over baseline approaches in capturing temporal dependencies, handling non-stationary data, and predicting market volatility patterns. Extensive experiments validate the model's generalizability and robustness, offering a practical framework for algorithmic trading and financial forecasting applications.",
     "doi": "10.1109/ACCESS.2024.3434524",
-    "doiLink": "https://ieeexplore.ieee.org/document/10613029",
+    "doiLink": "https://doi.org/10.1109/ACCESS.2024.3434524",
     "pdfLink": "https://ieeexplore.ieee.org/document/10613029"
   }
 ]

@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Dev/AI Lab — Injamam ul Haque. Full-stack projects and AI automation systems.">
-  <title>Dev/AI Lab — Injamam ul Haque</title>
+  <meta name="description" content="Lab & Projects — Injamam ul Haque. Full-stack and AI/ML work.">
+  <title>Lab &amp; Projects — Injamam ul Haque</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -15,87 +15,34 @@
     }
   </script>
   <style>
-    body { background-color: #080d1a; font-family: 'Inter', sans-serif; }
-    .glass {
-      background: rgba(15,23,42,0.75);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border: 1px solid rgba(255,255,255,0.06);
-    }
-    .gradient-text {
-      background: linear-gradient(135deg,#6366f1 0%,#8b5cf6 50%,#06b6d4 100%);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-    }
-    .grid-pattern {
-      background-image:
-        linear-gradient(rgba(99,102,241,0.04) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(99,102,241,0.04) 1px, transparent 1px);
-      background-size: 64px 64px;
-    }
+    body { background-color:#080d1a; font-family:'Inter',sans-serif; }
+    .glass { background:rgba(15,23,42,.75); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); border:1px solid rgba(255,255,255,.06); }
+    .gradient-text { background:linear-gradient(135deg,#6366f1 0%,#8b5cf6 50%,#06b6d4 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+    .grid-pattern { background-image:linear-gradient(rgba(99,102,241,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(99,102,241,.04) 1px,transparent 1px); background-size:64px 64px; }
     .orb { position:absolute; border-radius:50%; filter:blur(80px); pointer-events:none; z-index:0; }
-    .reveal { opacity:0; transform:translateY(24px); transition:opacity .7s ease, transform .7s ease; }
+    .reveal { opacity:0; transform:translateY(20px); transition:opacity .6s ease,transform .6s ease; }
     .reveal.visible { opacity:1; transform:translateY(0); }
-    .hover-scale { transition: transform .2s ease; }
-    .hover-scale:hover { transform: scale(1.02); }
     #mobile-menu { display:none; }
     #mobile-menu.open { display:block; }
-
-    /* Terminal */
-    .terminal {
-      background: #0d1117;
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 1rem;
-      font-family: 'JetBrains Mono', monospace;
-      overflow: hidden;
-    }
-    .terminal-bar {
-      background: rgba(255,255,255,0.04);
-      padding: 10px 16px;
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-    .t-dot { width: 10px; height: 10px; border-radius: 50%; }
-    .terminal-body { padding: 20px 24px; }
-    .t-line { margin-bottom: 6px; }
-    .t-prompt { color: #6366f1; }
-    .t-cmd { color: #e2e8f0; }
-    .t-out { color: #94a3b8; padding-left: 16px; }
-    .t-green { color: #10b981; }
-    .t-cyan { color: #06b6d4; }
-    .t-violet { color: #8b5cf6; }
-    .t-amber { color: #f59e0b; }
-    .t-cursor::after { content: '▋'; animation: tcursor .9s step-end infinite; }
-    @keyframes tcursor { 0%,100%{opacity:1} 50%{opacity:0} }
-
-    /* Tech tag colors */
-    .tag-python    { background:rgba(59,130,246,.12); border-color:rgba(59,130,246,.25); color:#93c5fd; }
-    .tag-js        { background:rgba(234,179,8,.12);  border-color:rgba(234,179,8,.25);  color:#fde68a; }
-    .tag-django    { background:rgba(16,185,129,.12); border-color:rgba(16,185,129,.25); color:#6ee7b7; }
-    .tag-nodejs    { background:rgba(34,197,94,.12);  border-color:rgba(34,197,94,.25);  color:#86efac; }
-    .tag-mysql     { background:rgba(249,115,22,.12); border-color:rgba(249,115,22,.25); color:#fdba74; }
-    .tag-mongodb   { background:rgba(16,185,129,.12); border-color:rgba(16,185,129,.25); color:#6ee7b7; }
-    .tag-n8n       { background:rgba(139,92,246,.12); border-color:rgba(139,92,246,.25); color:#c4b5fd; }
-    .tag-mlops     { background:rgba(99,102,241,.12); border-color:rgba(99,102,241,.25); color:#a5b4fc; }
-    .tag-ai        { background:rgba(139,92,246,.12); border-color:rgba(139,92,246,.25); color:#c4b5fd; }
-    .tag-auto      { background:rgba(6,182,212,.12);  border-color:rgba(6,182,212,.25);  color:#67e8f9; }
-    .tag-api       { background:rgba(251,191,36,.12); border-color:rgba(251,191,36,.25); color:#fde68a; }
-    .tag-sheets    { background:rgba(16,185,129,.12); border-color:rgba(16,185,129,.25); color:#6ee7b7; }
-    .tag-excel     { background:rgba(16,185,129,.12); border-color:rgba(16,185,129,.25); color:#6ee7b7; }
-    .tag-default   { background:rgba(148,163,184,.1); border-color:rgba(148,163,184,.2); color:#94a3b8; }
-
-    /* Bento grid */
-    .bento-lg { grid-column: span 2; }
-    @media (max-width: 768px) { .bento-lg { grid-column: span 1; } }
-
-    /* Project card glow */
-    .proj-card { transition: all .3s ease; position: relative; }
-    .proj-card:hover { box-shadow: 0 0 40px rgba(99,102,241,.1); border-color: rgba(99,102,241,.3) !important; }
-
-    /* Filter buttons */
-    .filter-btn { transition: all .2s ease; }
-    .filter-btn.active { background: rgba(99,102,241,.2); border-color: rgba(99,102,241,.4); color: #a5b4fc; }
+    .tag-python   { background:rgba(59,130,246,.12);  border-color:rgba(59,130,246,.25);  color:#93c5fd; }
+    .tag-django   { background:rgba(16,185,129,.12);  border-color:rgba(16,185,129,.25);  color:#6ee7b7; }
+    .tag-laravel  { background:rgba(239,68,68,.12);   border-color:rgba(239,68,68,.25);   color:#fca5a5; }
+    .tag-js       { background:rgba(234,179,8,.12);   border-color:rgba(234,179,8,.25);   color:#fde68a; }
+    .tag-html     { background:rgba(249,115,22,.12);  border-color:rgba(249,115,22,.25);  color:#fdba74; }
+    .tag-mysql    { background:rgba(249,115,22,.12);  border-color:rgba(249,115,22,.25);  color:#fdba74; }
+    .tag-postgres { background:rgba(96,165,250,.12);  border-color:rgba(96,165,250,.25);  color:#bfdbfe; }
+    .tag-mongodb  { background:rgba(16,185,129,.12);  border-color:rgba(16,185,129,.25);  color:#6ee7b7; }
+    .tag-tf       { background:rgba(251,146,60,.12);  border-color:rgba(251,146,60,.25);  color:#fed7aa; }
+    .tag-sklearn  { background:rgba(139,92,246,.12);  border-color:rgba(139,92,246,.25);  color:#c4b5fd; }
+    .tag-jupyter  { background:rgba(234,179,8,.12);   border-color:rgba(234,179,8,.25);   color:#fde68a; }
+    .tag-api      { background:rgba(6,182,212,.12);   border-color:rgba(6,182,212,.25);   color:#67e8f9; }
+    .tag-bootstrap{ background:rgba(139,92,246,.12);  border-color:rgba(139,92,246,.25);  color:#c4b5fd; }
+    .tag-colab    { background:rgba(251,191,36,.12);  border-color:rgba(251,191,36,.25);  color:#fde68a; }
+    .tag-default  { background:rgba(148,163,184,.1);  border-color:rgba(148,163,184,.2);  color:#94a3b8; }
+    .proj-card { transition:all .25s ease; }
+    .proj-card:hover { transform:translateY(-3px); box-shadow:0 8px 40px rgba(99,102,241,.12); border-color:rgba(99,102,241,.3) !important; }
+    .skill-pill { display:inline-flex; align-items:center; padding:6px 12px; border-radius:8px; font-size:12px; font-family:'JetBrains Mono',monospace; font-weight:500; border:1px solid; transition:all .2s ease; }
+    .skill-pill:hover { transform:translateY(-1px); }
   </style>
 </head>
 <body class="text-slate-100 antialiased min-h-screen">
@@ -110,7 +57,7 @@
         </a>
         <div class="hidden md:flex items-center gap-1">
           <a href="index.html" class="px-4 py-2 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg text-sm font-medium transition-all">Home</a>
-          <a href="dev-ai.html" class="px-4 py-2 text-white bg-white/5 rounded-lg text-sm font-medium transition-all">Dev/AI Lab</a>
+          <a href="dev-ai.html" class="px-4 py-2 text-white bg-white/5 rounded-lg text-sm font-medium">Lab &amp; Projects</a>
           <a href="research.html" class="px-4 py-2 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg text-sm font-medium transition-all">Research</a>
           <a href="index.html#education" class="px-4 py-2 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg text-sm font-medium transition-all">Education</a>
           <a href="index.html#contact" class="ml-2 px-5 py-2 bg-indigo-600 hover:bg-indigo-500 rounded-lg text-sm font-semibold transition-all hover:shadow-lg hover:shadow-indigo-500/20">Contact</a>
@@ -123,7 +70,7 @@
     <div id="mobile-menu" class="md:hidden border-t border-white/5">
       <div class="px-5 py-4 space-y-1">
         <a href="index.html" class="block px-3 py-2.5 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg text-sm transition-all">Home</a>
-        <a href="dev-ai.html" class="block px-3 py-2.5 text-white bg-white/5 rounded-lg text-sm">Dev/AI Lab</a>
+        <a href="dev-ai.html" class="block px-3 py-2.5 text-white bg-white/5 rounded-lg text-sm">Lab &amp; Projects</a>
         <a href="research.html" class="block px-3 py-2.5 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg text-sm transition-all">Research</a>
         <a href="index.html#education" class="block px-3 py-2.5 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg text-sm transition-all">Education</a>
         <a href="index.html#contact" class="block mt-2 px-3 py-2.5 bg-indigo-600 hover:bg-indigo-500 rounded-lg text-sm font-semibold text-center transition-all">Contact</a>
@@ -135,96 +82,126 @@
   <section class="relative pt-32 pb-16 px-5 sm:px-8 grid-pattern overflow-hidden">
     <div class="orb w-[500px] h-[500px] top-[-100px] left-[-150px] bg-indigo-600/8"></div>
     <div class="orb w-[400px] h-[400px] bottom-0 right-[-100px] bg-violet-600/6"></div>
-
-    <div class="relative z-10 max-w-6xl mx-auto">
-      <div class="mb-12 reveal">
-        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-violet-500/20 text-violet-400 text-sm font-mono font-medium mb-8">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-          Dev/AI Lab &amp; Projects
+    <div class="relative z-10 max-w-6xl mx-auto reveal">
+      <p class="font-mono text-xs text-indigo-400 tracking-[.2em] uppercase mb-4">Lab &amp; Projects</p>
+      <h1 class="text-5xl sm:text-6xl font-extrabold tracking-tight mb-5">
+        <span class="text-slate-50">Things I've</span>
+        <span class="gradient-text"> Built</span>
+      </h1>
+      <p class="text-slate-400 text-lg max-w-2xl mb-10">
+        A collection of full-stack web systems, AI/ML experiments, and data-driven tools — built during university, internships, and independent research.
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <div class="glass rounded-xl px-5 py-3 border border-white/5 flex items-center gap-3">
+          <span class="text-2xl font-bold text-indigo-400">10+</span>
+          <span class="text-slate-400 text-sm">Projects</span>
         </div>
-        <h1 class="text-5xl sm:text-6xl font-extrabold tracking-tight mb-4">
-          <span class="gradient-text">Vibecoding</span>
-          <span class="text-slate-50"> Lab</span>
-        </h1>
-        <p class="text-slate-400 text-lg max-w-2xl">
-          Where full-stack engineering meets AI automation. Real projects, real workflows, production-ready systems.
-        </p>
-      </div>
-
-      <!-- Terminal: Vibecoding Stats -->
-      <div class="terminal reveal max-w-3xl">
-        <div class="terminal-bar">
-          <div class="t-dot bg-red-400/70"></div>
-          <div class="t-dot bg-yellow-400/70"></div>
-          <div class="t-dot bg-green-400/70"></div>
-          <span class="ml-3 text-slate-500 text-xs">injamam@lab ~ zsh</span>
+        <div class="glass rounded-xl px-5 py-3 border border-white/5 flex items-center gap-3">
+          <span class="text-2xl font-bold text-violet-400">2</span>
+          <span class="text-slate-400 text-sm">IEEE Publications</span>
         </div>
-        <div class="terminal-body text-sm leading-7">
-          <div class="t-line"><span class="t-prompt">❯</span> <span class="t-cmd">whoami --dev-stats</span></div>
-          <div class="t-line t-out"><span class="t-green">✓</span> <span class="t-cyan">name</span>         Injamam ul Haque</div>
-          <div class="t-line t-out"><span class="t-green">✓</span> <span class="t-cyan">role</span>         Full-Stack Dev · AI Builder · Educator</div>
-          <div class="t-line t-out"><span class="t-green">✓</span> <span class="t-cyan">stack</span>        Python · Django · NodeJS · n8n · MySQL · MongoDB</div>
-          <div class="t-line t-out"><span class="t-green">✓</span> <span class="t-cyan">projects</span>     <span class="t-violet">6+</span> shipped to production</div>
-          <div class="t-line t-out"><span class="t-green">✓</span> <span class="t-cyan">ai_tools</span>     n8n · LLMs · AI Agents · MLOps pipelines</div>
-          <div class="t-line t-out"><span class="t-green">✓</span> <span class="t-cyan">research</span>     IEEE Access (Q1) · <span class="t-violet">2+ papers</span></div>
-          <div class="t-line t-out"><span class="t-green">✓</span> <span class="t-cyan">teaching</span>     CAIE CS · Glenrich International School</div>
-          <div class="t-line t-out"><span class="t-green">✓</span> <span class="t-cyan">company</span>      Arc Study Pathways (Founder)</div>
-          <div class="t-line mt-2"><span class="t-prompt">❯</span> <span class="t-cmd">ls projects/<span class="t-cursor"></span></span></div>
+        <div class="glass rounded-xl px-5 py-3 border border-white/5 flex items-center gap-3">
+          <span class="text-2xl font-bold text-emerald-400">3+</span>
+          <span class="text-slate-400 text-sm">Years Coding</span>
+        </div>
+        <div class="glass rounded-xl px-5 py-3 border border-white/5 flex items-center gap-3">
+          <span class="text-2xl font-bold text-cyan-400">2</span>
+          <span class="text-slate-400 text-sm">AI Roles</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- TECH STACK OVERVIEW -->
-  <section class="py-12 px-5 sm:px-8 border-t border-white/5">
+  <!-- TECH STACK -->
+  <section class="py-16 px-5 sm:px-8 border-t border-white/5">
     <div class="max-w-6xl mx-auto reveal">
-      <h2 class="text-xl font-semibold text-slate-300 mb-6 font-mono">
-        <span class="text-slate-500">// </span>Tech Stack
-      </h2>
-      <div class="flex flex-wrap gap-3">
-        <span class="px-3 py-1.5 rounded-lg border tag-python text-xs font-mono font-medium">Python</span>
-        <span class="px-3 py-1.5 rounded-lg border tag-django text-xs font-mono font-medium">Django</span>
-        <span class="px-3 py-1.5 rounded-lg border tag-nodejs text-xs font-mono font-medium">NodeJS</span>
-        <span class="px-3 py-1.5 rounded-lg border tag-mysql text-xs font-mono font-medium">MySQL</span>
-        <span class="px-3 py-1.5 rounded-lg border tag-mongodb text-xs font-mono font-medium">MongoDB</span>
-        <span class="px-3 py-1.5 rounded-lg border tag-n8n text-xs font-mono font-medium">n8n</span>
-        <span class="px-3 py-1.5 rounded-lg border tag-ai text-xs font-mono font-medium">AI Agents</span>
-        <span class="px-3 py-1.5 rounded-lg border tag-mlops text-xs font-mono font-medium">MLOps</span>
-        <span class="px-3 py-1.5 rounded-lg border tag-auto text-xs font-mono font-medium">Automation</span>
-        <span class="px-3 py-1.5 rounded-lg border tag-sheets text-xs font-mono font-medium">Google Sheets</span>
-        <span class="px-3 py-1.5 rounded-lg border tag-api text-xs font-mono font-medium">REST APIs</span>
-        <span class="px-3 py-1.5 rounded-lg border tag-js text-xs font-mono font-medium">JavaScript</span>
-        <span class="px-3 py-1.5 rounded-lg border border-slate-600/30 bg-slate-700/20 text-slate-400 text-xs font-mono font-medium">HTML/CSS</span>
-        <span class="px-3 py-1.5 rounded-lg border border-slate-600/30 bg-slate-700/20 text-slate-400 text-xs font-mono font-medium">Bootstrap</span>
-        <span class="px-3 py-1.5 rounded-lg border border-slate-600/30 bg-slate-700/20 text-slate-400 text-xs font-mono font-medium">C/C++</span>
-        <span class="px-3 py-1.5 rounded-lg border border-slate-600/30 bg-slate-700/20 text-slate-400 text-xs font-mono font-medium">Java</span>
+      <h2 class="text-2xl font-bold text-slate-100 mb-1">Tech Stack</h2>
+      <p class="text-slate-500 text-sm mb-8">Languages, frameworks, and tools I work with</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div class="glass rounded-xl p-5 border border-white/5">
+          <p class="text-xs font-mono text-slate-500 uppercase tracking-widest mb-4">Languages</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-pill tag-python">Python</span>
+            <span class="skill-pill tag-js">JavaScript</span>
+            <span class="skill-pill tag-html">HTML / CSS</span>
+            <span class="skill-pill tag-default">PHP</span>
+            <span class="skill-pill tag-default">Java</span>
+            <span class="skill-pill tag-default">C / C++</span>
+            <span class="skill-pill tag-default">SQL</span>
+          </div>
+        </div>
+        <div class="glass rounded-xl p-5 border border-white/5">
+          <p class="text-xs font-mono text-slate-500 uppercase tracking-widest mb-4">Frameworks</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-pill tag-django">Django</span>
+            <span class="skill-pill tag-laravel">Laravel</span>
+            <span class="skill-pill tag-bootstrap">Bootstrap</span>
+            <span class="skill-pill tag-default">NodeJS</span>
+          </div>
+        </div>
+        <div class="glass rounded-xl p-5 border border-white/5">
+          <p class="text-xs font-mono text-slate-500 uppercase tracking-widest mb-4">Databases</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-pill tag-mysql">MySQL</span>
+            <span class="skill-pill tag-postgres">PostgreSQL</span>
+            <span class="skill-pill tag-mongodb">MongoDB</span>
+          </div>
+        </div>
+        <div class="glass rounded-xl p-5 border border-white/5">
+          <p class="text-xs font-mono text-slate-500 uppercase tracking-widest mb-4">AI &amp; ML</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-pill tag-tf">TensorFlow</span>
+            <span class="skill-pill tag-tf">Keras</span>
+            <span class="skill-pill tag-tf">PyTorch</span>
+            <span class="skill-pill tag-sklearn">Scikit-Learn</span>
+            <span class="skill-pill tag-python">NumPy</span>
+            <span class="skill-pill tag-python">Pandas</span>
+            <span class="skill-pill tag-python">Matplotlib</span>
+            <span class="skill-pill tag-default">Seaborn</span>
+          </div>
+        </div>
+        <div class="glass rounded-xl p-5 border border-white/5">
+          <p class="text-xs font-mono text-slate-500 uppercase tracking-widest mb-4">Tools &amp; Platforms</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-pill tag-default">Git</span>
+            <span class="skill-pill tag-default">n8n</span>
+            <span class="skill-pill tag-colab">Google Colab</span>
+            <span class="skill-pill tag-colab">Jupyter</span>
+            <span class="skill-pill tag-default">Power BI</span>
+            <span class="skill-pill tag-default">Canva</span>
+          </div>
+        </div>
+        <div class="glass rounded-xl p-5 border border-white/5">
+          <p class="text-xs font-mono text-slate-500 uppercase tracking-widest mb-4">Design &amp; Productivity</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-pill tag-default">Excel / Sheets</span>
+            <span class="skill-pill tag-default">Illustrator</span>
+            <span class="skill-pill tag-default">Photoshop</span>
+            <span class="skill-pill tag-default">Premiere Pro</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- PROJECTS BENTO GRID -->
-  <section class="py-16 px-5 sm:px-8">
+  <!-- PROJECTS -->
+  <section class="py-16 px-5 sm:px-8 border-t border-white/5">
     <div class="max-w-6xl mx-auto">
-      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-10 reveal">
+      <div class="flex items-end justify-between mb-10 reveal">
         <div>
-          <h2 class="text-3xl font-bold text-slate-50">Projects</h2>
-          <p class="text-slate-400 text-sm mt-1">Production-ready systems and experiments</p>
+          <h2 class="text-2xl font-bold text-slate-100 mb-1">Projects</h2>
+          <p class="text-slate-500 text-sm">All <span id="proj-count" class="text-indigo-400 font-mono font-semibold">—</span> projects, from concept to deployment</p>
         </div>
-        <!-- Filter pills -->
-        <div class="flex flex-wrap gap-2" id="filter-buttons">
-          <button onclick="filterProjects('all')" class="filter-btn active px-4 py-1.5 glass rounded-full border border-white/10 text-slate-300 text-xs font-mono transition-all">All</button>
-          <button onclick="filterProjects('Development & Education')" class="filter-btn px-4 py-1.5 glass rounded-full border border-white/10 text-slate-300 text-xs font-mono transition-all">Dev &amp; Education</button>
-          <button onclick="filterProjects('AI/MLOps & Business')" class="filter-btn px-4 py-1.5 glass rounded-full border border-white/10 text-slate-300 text-xs font-mono transition-all">AI / MLOps</button>
-          <button onclick="filterProjects('Data & Business')" class="filter-btn px-4 py-1.5 glass rounded-full border border-white/10 text-slate-300 text-xs font-mono transition-all">Data</button>
-        </div>
+        <a href="https://github.com/injamam00155" target="_blank" rel="noopener"
+           class="hidden sm:flex items-center gap-2 px-4 py-2 glass border border-white/10 hover:border-white/25 rounded-lg text-sm text-slate-300 hover:text-white transition-all">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+          View GitHub
+        </a>
       </div>
-
-      <!-- Bento grid -->
-      <div id="projects-container" class="grid grid-cols-1 md:grid-cols-2 gap-5">
-        <!-- Loading -->
-        <div class="col-span-2 glass rounded-2xl p-8 border border-white/5 text-center">
-          <div class="w-8 h-8 border-2 border-violet-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-          <p class="text-slate-400 text-sm font-mono">Initializing lab...</p>
+      <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <div class="md:col-span-2 glass rounded-2xl p-10 border border-white/5 text-center">
+          <div class="w-7 h-7 border-2 border-indigo-500 border-t-transparent rounded-full animate-spin mx-auto mb-3"></div>
+          <p class="text-slate-500 text-sm font-mono">Loading projects...</p>
         </div>
       </div>
     </div>
@@ -239,121 +216,62 @@
   </footer>
 
   <script>
-    // Scroll reveal
     const obs = new IntersectionObserver(
       entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
-      { threshold: 0.1 }
+      { threshold: 0.08 }
     );
     document.querySelectorAll('.reveal').forEach(e => obs.observe(e));
 
-    // Tag class helper
     function tagClass(tech) {
       const t = tech.toLowerCase();
-      if (t.includes('python'))     return 'tag-python';
-      if (t.includes('django'))     return 'tag-django';
-      if (t.includes('node'))       return 'tag-nodejs';
-      if (t.includes('mysql'))      return 'tag-mysql';
-      if (t.includes('mongo'))      return 'tag-mongodb';
-      if (t.includes('n8n'))        return 'tag-n8n';
-      if (t.includes('mlops'))      return 'tag-mlops';
-      if (t.includes('ai') || t.includes('agent') || t.includes('llm')) return 'tag-ai';
-      if (t.includes('automat'))    return 'tag-auto';
-      if (t.includes('api'))        return 'tag-api';
-      if (t.includes('sheet') || t.includes('google')) return 'tag-sheets';
-      if (t.includes('excel'))      return 'tag-excel';
-      if (t.includes('javascript') || t.includes('js')) return 'tag-js';
+      if (t === 'python') return 'tag-python';
+      if (t.includes('django')) return 'tag-django';
+      if (t.includes('laravel')) return 'tag-laravel';
+      if (t.includes('javascript') || t === 'js') return 'tag-js';
+      if (t.includes('html') || t.includes('css')) return 'tag-html';
+      if (t.includes('mysql')) return 'tag-mysql';
+      if (t.includes('postgresql') || t.includes('postgres')) return 'tag-postgres';
+      if (t.includes('mongo')) return 'tag-mongodb';
+      if (['tensorflow','keras','pytorch','deep learning','computer vision'].some(k => t.includes(k))) return 'tag-tf';
+      if (['scikit','sklearn','nlp','pandas','numpy'].some(k => t.includes(k))) return 'tag-sklearn';
+      if (t.includes('jupyter') || t.includes('notebook')) return 'tag-jupyter';
+      if (t.includes('api')) return 'tag-api';
+      if (t.includes('bootstrap')) return 'tag-bootstrap';
+      if (t.includes('colab')) return 'tag-colab';
       return 'tag-default';
     }
 
-    // Category icon + color
-    function categoryMeta(cat) {
-      const c = cat.toLowerCase();
-      if (c.includes('ai') || c.includes('mlops')) return {
-        icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"/>`,
-        border: 'border-violet-500/20', hover: 'hover:border-violet-500/40',
-        badge: 'bg-violet-500/10 border-violet-500/20 text-violet-400',
-        icon_bg: 'bg-violet-500/10 border-violet-500/20', icon_c: 'text-violet-400'
-      };
-      if (c.includes('data')) return {
-        icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>`,
-        border: 'border-amber-500/20', hover: 'hover:border-amber-500/40',
-        badge: 'bg-amber-500/10 border-amber-500/20 text-amber-400',
-        icon_bg: 'bg-amber-500/10 border-amber-500/20', icon_c: 'text-amber-400'
-      };
-      // default: dev & education
-      return {
-        icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>`,
-        border: 'border-indigo-500/20', hover: 'hover:border-indigo-500/40',
-        badge: 'bg-indigo-500/10 border-indigo-500/20 text-indigo-400',
-        icon_bg: 'bg-indigo-500/10 border-indigo-500/20', icon_c: 'text-indigo-400'
-      };
-    }
-
-    let allProjects = [];
-
     function renderProjects(projects) {
-      const container = document.getElementById('projects-container');
-      if (!projects.length) {
-        container.innerHTML = `<div class="col-span-2 glass rounded-2xl p-8 border border-white/5 text-center"><p class="text-slate-400 text-sm">No projects match this filter.</p></div>`;
-        return;
-      }
-      container.innerHTML = projects.map((proj, i) => {
-        const meta = categoryMeta(proj.category);
-        const isLarge = i === 0 || (proj.techStack && proj.techStack.length >= 3);
-        const tags = proj.techStack.map(t => `<span class="px-2.5 py-1 rounded-md border ${tagClass(t)} text-xs font-mono font-medium">${t}</span>`).join('');
-        return `
-          <div class="proj-card glass rounded-2xl p-6 sm:p-8 border ${meta.border} ${meta.hover} ${isLarge ? 'bento-lg' : ''} reveal" style="transition-delay:${i*80}ms; transition:all .3s ease">
-            <div class="flex items-start justify-between mb-5">
-              <div class="flex items-center gap-3">
-                <div class="w-11 h-11 rounded-xl ${meta.icon_bg} border flex items-center justify-center flex-shrink-0">
-                  <svg class="w-5 h-5 ${meta.icon_c}" fill="none" stroke="currentColor" viewBox="0 0 24 24">${meta.icon}</svg>
-                </div>
-                <span class="px-2.5 py-1 ${meta.badge} border rounded-full text-xs font-mono font-medium">${proj.category}</span>
-              </div>
-              <a href="${proj.githubUrl}" target="_blank" rel="noopener"
-                 class="p-2 glass rounded-lg border border-white/5 hover:border-white/20 transition-all group"
-                 title="View on GitHub">
-                <svg class="w-4 h-4 text-slate-400 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
-              </a>
-            </div>
-
-            <h3 class="text-slate-100 font-bold text-lg mb-3 leading-snug">${proj.title}</h3>
-            <p class="text-slate-400 text-sm leading-relaxed mb-5">${proj.description}</p>
-
-            <div class="flex flex-wrap gap-2">${tags}</div>
+      document.getElementById('proj-count').textContent = projects.length;
+      const grid = document.getElementById('projects-grid');
+      grid.innerHTML = projects.map((p, i) => {
+        const tags = p.techStack.map(t => `<span class="skill-pill ${tagClass(t)}">${t}</span>`).join('');
+        const isSpecificGithub = p.githubUrl && p.githubUrl.includes('github.com') && p.githubUrl !== 'https://github.com/injamam00155';
+        const isLive = p.githubUrl && !p.githubUrl.includes('github.com') && p.githubUrl !== '#';
+        let linkBtn = '';
+        if (isSpecificGithub) {
+          linkBtn = `<a href="${p.githubUrl}" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 px-3 py-1.5 glass border border-white/10 hover:border-white/30 rounded-lg text-xs text-slate-400 hover:text-white transition-all font-mono"><svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>GitHub</a>`;
+        } else if (isLive) {
+          linkBtn = `<a href="${p.githubUrl}" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 px-3 py-1.5 glass border border-white/10 hover:border-indigo-500/40 rounded-lg text-xs text-slate-400 hover:text-indigo-400 transition-all font-mono"><svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>Live Demo</a>`;
+        }
+        return `<div class="proj-card glass rounded-2xl p-6 border border-white/5 reveal" style="transition-delay:${i * 45}ms">
+          <div class="flex items-start justify-between mb-4">
+            <span class="font-mono text-xs text-slate-700 font-semibold">${String(i + 1).padStart(2, '0')}</span>
+            ${linkBtn}
           </div>
-        `;
+          <h3 class="text-slate-100 font-bold text-base leading-snug mb-2">${p.title}</h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-5">${p.description}</p>
+          <div class="flex flex-wrap gap-1.5">${tags}</div>
+        </div>`;
       }).join('');
-
-      // Re-observe reveals
-      document.querySelectorAll('.reveal').forEach(e => obs.observe(e));
+      document.querySelectorAll('.proj-card').forEach(e => obs.observe(e));
     }
 
-    // Filter logic
-    let activeFilter = 'all';
-    function filterProjects(cat) {
-      activeFilter = cat;
-      // Update button styles
-      document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
-      event.target.classList.add('active');
-      // Filter and render
-      const filtered = cat === 'all' ? allProjects : allProjects.filter(p => p.category === cat);
-      renderProjects(filtered);
-    }
-
-    // Fetch
     fetch('./data/projects.json')
       .then(r => r.json())
-      .then(data => {
-        allProjects = data;
-        renderProjects(data);
-      })
+      .then(renderProjects)
       .catch(() => {
-        document.getElementById('projects-container').innerHTML = `
-          <div class="col-span-2 glass rounded-2xl p-8 border border-white/5 text-center">
-            <p class="text-slate-400 text-sm font-mono">Error loading projects. Run a local server to preview.</p>
-          </div>
-        `;
+        document.getElementById('projects-grid').innerHTML = '<div class="md:col-span-2 glass rounded-2xl p-10 border border-white/5 text-center"><p class="text-slate-500 text-sm font-mono">Could not load projects.</p></div>';
       });
   </script>
 </body>
